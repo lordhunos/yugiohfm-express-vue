@@ -1,15 +1,15 @@
 {
-  "name": "ygofm_api",
+  "name": "yugiohfm-express-vue",
   "version": "1.0.0",
-  "description": "",
+  "description": "Yu-Gi-Oh Forbidden Memories Database App created with NodeJs, Express and VueJS",
   "main": "src/index.js",
   "scripts": {
     "start": "npm src/index.js",
     "dev": "nodemon src/index.js",
     "webpack": "webpack --mode development --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "lordhunos <jf.lpzclfnt@gmail.com>",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.8.10",
@@ -27,5 +27,22 @@
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordhunos/yugiohfm-express-vue.git"
+  },
+  "keywords": [
+    "yu-gi-oh",
+    "forbidden",
+    "memories",
+    "psx",
+    "node",
+    "express",
+    "vue"
+  ],
+  "bugs": {
+    "url": "https://github.com/lordhunos/yugiohfm-express-vue/issues"
+  },
+  "homepage": "https://github.com/lordhunos/yugiohfm-express-vue#readme"
 }

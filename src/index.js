@@ -1,3 +1,4 @@
+const database = require('./database')
 const path = require('path')
 const morgan = require('morgan')
 const express = require('express')
@@ -6,7 +7,7 @@ const cardRoutes = require('./routes/cards');
 const rivalRoutes = require('./routes/rivals');
 
 //Database
-require('./database')()
+database()
 
 
 //Config
