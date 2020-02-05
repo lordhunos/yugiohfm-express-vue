@@ -6,4 +6,12 @@ const UserSchema = new mongoose.Schema({
     hash_password: String,
 }, { timestamps: true });
 
-mongoose.model('user', UserSchema);
+UserSchema.methods.existsUsername = function(cb) {
+    return 'hello'
+}
+
+UserSchema.methods.existsEmail= function(cb) {
+    return cb
+}
+
+module.exports = mongoose.model('user', UserSchema);

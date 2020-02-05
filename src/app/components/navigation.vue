@@ -1,8 +1,10 @@
 <template>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/">{{ title }}</a>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <router-link class="navbar-brand" to="/app">
+        <img src="/app/img/logo.png" alt="YuGiOh logo" height="50">
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,19 +19,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home
+            <router-link class="nav-link" to="/app/login">
+              Login
               <span class="sr-only">(current)</span>
-            </a>
+            </router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <router-link class="nav-link" to="/app/register">Register</router-link>
           </li>
         </ul>
       </div>
@@ -41,8 +37,18 @@
 export default {
     data() {
         return {
-            title: "YuGiOh Forbidden Memories"
+
         }
     }
 }
 </script>
+
+<style>
+  nav {
+    background-image: linear-gradient(rgba(0,0,0,3),rgba(0,0,0,0));    
+    position: sticky!important;
+    top: 0;
+    width: 100%; 
+    z-index: 2;   
+  }
+</style>

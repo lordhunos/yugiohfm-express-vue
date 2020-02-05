@@ -1,0 +1,10 @@
+:root {
+    --input-padding-x: 1rem;
+    --input-padding-y: .5rem;
+}
+
+body {
+    background: url("/app/img/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    /* background-image: linear-gradient(to right, #f9d423 0%, #f83600 100%); */
+}

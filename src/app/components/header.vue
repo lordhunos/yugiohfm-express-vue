@@ -16,11 +16,11 @@
 
 <script>
 export default {
-  name: "header",
+  name: "headerBanner",
   data() {
     return {
 
-    };
+    }
   }
-};
+}
 </script>
