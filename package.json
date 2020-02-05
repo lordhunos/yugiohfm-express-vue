@@ -8,16 +8,18 @@
     "dev": "nodemon src/index.js",
     "webpack": "webpack --mode development --watch"
   },
-  "author": "lordhunos <jf.lpzclfnt@gmail.com>",
+  "author": "LordHunos <jf.lpzclfnt@gmail.com>",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "connect-history-api-fallback": "^1.6.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.8.10",
     "morgan": "^1.9.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
