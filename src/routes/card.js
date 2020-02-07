@@ -1,7 +1,6 @@
-const { ObjectId } = require("mongoose").Types
-const express = require('express')
-const router = express.Router()
+const router = require('express').Router()
 const Card = require('../models/Card')
+const { validateObjID } = require('../utils/utils')
 
 
 router.get('/cards', async (req, res, next) => {
@@ -18,12 +17,5 @@ router.get('/card/:id', validateObjID, async (req, res, next) => {
         throw new Error(e)
     }
 })
-
-function validateObjID(req, res, next) {
-    if(!ObjectId.isValid(req.params.id)){
-        res.sendStatus(404)
-    }
-    next()
-}
 
 module.exports = router

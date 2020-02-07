@@ -8,9 +8,9 @@ const morgan = require('morgan')
 const express = require('express')
 const passport = require('passport')
 //Router files (to implement an index)
-const actionRoutes = require('./routes/actions')
-const cardRoutes = require('./routes/cards')
-const rivalRoutes = require('./routes/rivals')
+const userRoutes = require('./routes/user')
+const cardRoutes = require('./routes/card')
+const rivalRoutes = require('./routes/rival')
 
 const app = express()
 
@@ -18,7 +18,8 @@ const app = express()
 database()
 
 //Config
-app.set('port', process.env.APP_PORT || 3000)
+require('./utils/auth')
+app.set('port', process.env.PORT || 3000)
 
 //Middlewares
 app.use(morgan('dev'))
@@ -28,7 +29,7 @@ app.use(passport.initialize())
 
 //Server Routes
 app.use('/api', [cardRoutes, rivalRoutes])
-app.use('/auth', actionRoutes)
+app.use('/user', userRoutes)
 
 //Ficheros estaticos servidos a rutas relativas a /app 
 app.use('/app', express.static(path.join(__dirname, 'public')))

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-require('dotenv').config()
+//require('dotenv').config()
 
 const role = process.env.DB_ROLE
 const protocol = process.env.DB_PROTOCOL
