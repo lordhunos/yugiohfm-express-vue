@@ -8,11 +8,12 @@
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">Register</h5>
-            <form action='/auth/register' method='post' class="form-signin">
+            <form action='/user/register' method='post' class="form-signin">
               <div class="form-label-group">
                 <input
                   type="text"
                   id="inputUserame"
+                  name="username"
                   class="form-control"
                   placeholder="Username"
                   required
@@ -25,6 +26,7 @@
                 <input
                   type="email"
                   id="inputEmail"
+                  name="email"
                   class="form-control"
                   placeholder="Email address"
                   required
@@ -38,6 +40,7 @@
                 <input
                   type="password"
                   id="inputPassword"
+                  name="password"
                   class="form-control"
                   placeholder="Password"
                   required
@@ -49,6 +52,7 @@
                 <input
                   type="password"
                   id="inputConfirmPassword"
+                  name="rpassword"
                   class="form-control"
                   placeholder="Password"
                   required

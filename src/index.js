@@ -1,24 +1,28 @@
 //Load environment
 require('dotenv').config()
-//Set database
+
+//Load database
 const database = require('./database')
+
 //Node modules
 const path = require('path')
 const morgan = require('morgan')
 const express = require('express')
-const passport = require('passport')
+
 //Router files (to implement an index)
 const userRoutes = require('./routes/user')
+const authRoutes = require('./routes/auth')
 const cardRoutes = require('./routes/card')
 const rivalRoutes = require('./routes/rival')
 
-const app = express()
+const passport = require('./authenticators/strategies')
 
-//Start database
+//Start Database
 database()
 
+const app = express()
+
 //Config
-require('./utils/auth')
 app.set('port', process.env.PORT || 3000)
 
 //Middlewares
@@ -30,6 +34,7 @@ app.use(passport.initialize())
 //Server Routes
 app.use('/api', [cardRoutes, rivalRoutes])
 app.use('/user', userRoutes)
+app.use('/auth', authRoutes)
 
 //Ficheros estaticos servidos a rutas relativas a /app 
 app.use('/app', express.static(path.join(__dirname, 'public')))
